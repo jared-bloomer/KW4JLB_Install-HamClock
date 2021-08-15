@@ -1,0 +1,21 @@
+---
+- name: Create .hamclock directory
+  file:
+    path: /home/pi/.hamclock
+    state: directory
+    owner: pi
+    group: pi
+
+- name: Copy Icon Image
+  copy:
+    src: /home/pi/ESPHamClock/hamclock.png
+    dest: /home/pi/.hamclock/hamclock.png 
+
+- name: Create Desktop Icon
+  copy:
+    src: /home/pi/ESPHamClock/hamclock.desktop
+    dest: /home/pi/Desktop/hamclock.desktop
+    owner: pi
+    group: pi
+    mode: 0755
+ 

@@ -11,4 +11,6 @@ By Default this will compile and install Ham Clock using the 800x480 resolution.
 
 After the installation is complete, you can run hamclock with the command ``hamclock &``
 
+If you would like to create a desktop icon for ham clock, run the command ``ansible-playbook create_desktop_icon.yml``
+
 
