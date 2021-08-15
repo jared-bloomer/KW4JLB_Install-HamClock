@@ -1,0 +1,8 @@
+# Set the Installation Resolution of Ham Clock
+# Possible values are
+#
+# 800x480
+# 1600x960
+# 2400xx1440
+# 3200x1920
+resolution: "800x480"
