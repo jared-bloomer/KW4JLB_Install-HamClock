@@ -18,7 +18,7 @@
   command:
     chdir: /home/pi/ESPHamClock
     cmd: make install
-    become: true
-    become_user: root
-    become_method: sudo
+  become: true
+  become_user: root
+  become_method: sudo
 
