@@ -1,0 +1,24 @@
+---
+- name: Download Install Files
+  get_url:
+    url: https://www.clearskyinstitute.com/ham/HamClock/ESPHamClock.zip
+    dest: /home/pi/ESPHamClock.zip
+
+- name: Unzip Install files
+  unarchive:
+    src: /home/pi/ESPHamClock.zip
+    dest: /home/pi/
+
+- name: Compile Code
+  command:
+    chdir: /home/pi/ESPHamClock
+    cmd: "make -j 4 hamclock-800x480"
+
+- name: Install
+  command:
+    chdir: /home/pi/ESPHamClock
+    cmd: make install
+    become: true
+    become_user: root
+    become_method: sudo
+

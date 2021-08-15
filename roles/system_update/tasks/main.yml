@@ -1,0 +1,6 @@
+---
+- name: Install System updates
+  apt:
+    update_cache: yes
+    upgrade: yes
+

@@ -1,0 +1,11 @@
+---
+- name: Install Ham Clock
+  hosts: localhost
+  gather_facts: True
+  become: true
+  become_method: sudo
+
+  roles:
+    - system_update
+    - install_prereqs
+    - install_hamclock

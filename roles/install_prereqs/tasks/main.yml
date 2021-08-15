@@ -1,0 +1,12 @@
+---
+- name: Install Prerequisite Packages
+  apt:
+    name:
+      - make 
+      - g++ 
+      - libx11-dev 
+      - xserver-xorg 
+      - raspberrypi-ui-mods 
+      - lightdm 
+      - lxsession
+    state: latest
